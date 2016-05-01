@@ -37,29 +37,67 @@ warehouse = {
   }
 }
 
+puts 'Please enter 1st store location.'
+input=gets.chomp
+input_array=[]
+input_array.push input
 
-# def item_at_bay(location)
-#   input=location.to_sym
- 
-#   hash = "warehouse_b"
-#   return warehouse[hash][input]
-# end
+puts 'Please enter 2nd store location.'
+input=gets.chomp
+input_array.push input
 
+puts 'Please enter 3rd store location.'
+input=gets.chomp
+input_array.push input
 
-puts "Input warehouse location"
-location=gets.chomp
-location_first=location.chars.first
-location_sym=location.to_sym
-if location_first=="a"
-    hash="warehouse_a"
-  elsif location_first=="b"
-    hash="warehouse_b"
-  else
-    hash="warehouse_c"
+output_array=[]
+
+for location in input_array
+  location_first=location.chars.first
+  location_sym=location.to_sym
+  if location_first=="a"
+      hash="warehouse_a"
+    elsif location_first=="b"
+      hash="warehouse_b"
+    else
+      hash="warehouse_c"
+  end
+  output_array.push warehouse[hash][location_sym]
 end
-puts warehouse[hash][location_sym]
 
-puts warehouse[hash]["model car"]
+puts output_array
+
+
+
+
+
+
+
+# #working loop format
+# for item in input_array
+#   item2 = item.upcase
+#   output_array.push(item2)
+# end
+# puts output_array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 

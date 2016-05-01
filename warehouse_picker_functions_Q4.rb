@@ -1,3 +1,7 @@
+# warehouse = {0 => "Zero", 1 => "One", :two => "Two"}
+
+# puts warehouse.key("Two")
+
 warehouse = {
   "warehouse_a" =>{
   :a1 => "needle",
@@ -38,34 +42,30 @@ warehouse = {
 }
 
 
-# def item_at_bay(location)
-#   input=location.to_sym
- 
-#   hash = "warehouse_b"
-#   return warehouse[hash][input]
+puts 'Please enter 1st store location.'
+input=gets.chomp
+input_array=[]
+input_array.push input
+
+puts 'Please enter 2nd store location.'
+input=gets.chomp
+input_array.push input
+
+puts 'Please enter 3rd store location.'
+input=gets.chomp
+input_array.push input
+
+puts input_array
+
+
+
+# for item in input_array
+
+# puts warehouse["warehouse_a"].key(item)
+# puts warehouse["warehouse_b"].key(item)
+# puts warehouse["warehouse_c"].key(item)
+
 # end
-
-
-puts "Input warehouse location"
-location=gets.chomp
-location_first=location.chars.first
-location_sym=location.to_sym
-if location_first=="a"
-    hash="warehouse_a"
-  elsif location_first=="b"
-    hash="warehouse_b"
-  else
-    hash="warehouse_c"
-end
-puts warehouse[hash][location_sym]
-
-puts warehouse[hash]["model car"]
-  
-
-
-
-
-
 
 
 
