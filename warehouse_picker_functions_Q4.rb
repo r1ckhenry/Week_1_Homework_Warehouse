@@ -1,6 +1,3 @@
-# warehouse = {0 => "Zero", 1 => "One", :two => "Two"}
-
-# puts warehouse.key("Two")
 
 warehouse = {
   "warehouse_a" =>{
@@ -42,30 +39,31 @@ warehouse = {
 }
 
 
-puts 'Please enter 1st store location.'
+puts 'Please enter 1st store item.'
 input=gets.chomp
 input_array=[]
 input_array.push input
 
-puts 'Please enter 2nd store location.'
+puts 'Please enter 2nd store item.'
 input=gets.chomp
 input_array.push input
 
-puts 'Please enter 3rd store location.'
+puts 'Please enter 3rd store item.'
 input=gets.chomp
 input_array.push input
 
-puts input_array
+output_array=[]
 
+for item in input_array
+  if warehouse["warehouse_a"].key(item) == true
+  output_array.push warehouse["warehouse_a"].key(item)
+  elsif warehouse["warehouse_b"].key(item) == true
+  output_array.push warehouse["warehouse_b"].key(item)
+  else warehouse["warehouse_c"].key(item) == true
+  output_array.push warehouse["warehouse_c"].key(item)
+  end
+end
 
-
-# for item in input_array
-
-# puts warehouse["warehouse_a"].key(item)
-# puts warehouse["warehouse_b"].key(item)
-# puts warehouse["warehouse_c"].key(item)
-
-# end
-
+puts output_array
 
 
