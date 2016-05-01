@@ -38,15 +38,7 @@ warehouse = {
 }
 
 
-# def item_at_bay(location)
-#   input=location.to_sym
- 
-#   hash = "warehouse_b"
-#   return warehouse[hash][input]
-# end
-
-
-puts "Input warehouse location"
+def item_at_bay(location)
 location=gets.chomp
 location_first=location.chars.first
 location_sym=location.to_sym
@@ -57,9 +49,10 @@ if location_first=="a"
   else
     hash="warehouse_c"
 end
-puts warehouse[hash][location_sym]
+return warehouse[hash][location_sym]
+end
 
-puts warehouse[hash]["model car"]
+
   
 
 

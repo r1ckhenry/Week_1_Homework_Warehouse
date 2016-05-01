@@ -53,16 +53,21 @@ input=gets.chomp
 input_array.push input
 
 output_array=[]
-
 for item in input_array
-  if warehouse["warehouse_a"].key(item) == true
   output_array.push warehouse["warehouse_a"].key(item)
-  elsif warehouse["warehouse_b"].key(item) == true
   output_array.push warehouse["warehouse_b"].key(item)
-  else warehouse["warehouse_c"].key(item) == true
   output_array.push warehouse["warehouse_c"].key(item)
-  end
 end
+
+
+# for item in input_array
+#   if warehouse["warehouse_a"].key(item)
+#   output_array.push warehouse["warehouse_a"].key(item)
+#   elsif warehouse["warehouse_b"].key(item)
+#   output_array.push warehouse["warehouse_b"].key(item)
+#   else output_array.push warehouse["warehouse_c"].key(item)
+#   end
+# end
 
 puts output_array
 
