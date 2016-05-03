@@ -48,5 +48,11 @@ puts warehouse["warehouse_a"].key(item)
 puts warehouse["warehouse_b"].key(item)
 puts warehouse["warehouse_c"].key(item)
 
+for row in warehouse.keys 
+  if warehouse[row].include?( item )
+    return warehouse[row].key(item)
+  end
+end
+
 
 
